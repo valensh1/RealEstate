@@ -1,3 +1,76 @@
-h2 {
-  color: purple;
+nav {
+  display: flex;
+  width: 100vw;
+  height: 5vh;
+  margin: auto;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 15vw;
+}
+
+.logo > img {
+  height: 7rem;
+}
+
+.logo > h1 {
+  font-size: 4rem;
+  margin-left: -15rem;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  width: 50%;
+}
+
+li {
+  list-style: none;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.navbar-dropdown {
+  display: inline-block;
+}
+
+.navbar-dropdown-content {
+  display: none;
+  height: fit-content;
+  width: 25rem;
+  color: white;
+  margin-left: -2rem;
+}
+
+.navbar-dropdown-content li {
+  margin: 0.5rem 0rem;
+  font-size: 1.75rem;
+}
+
+.navbar-dropdown-content a {
+  text-decoration: none;
+  color: blue;
+}
+
+.navbar-dropdown:hover .navbar-dropdown-content {
+  display: inline-block;
+  position: absolute;
+  padding-top: 1rem;
+  background-color: white;
+  color: black;
+  min-width: 20rem;
+  padding-left: 2rem;
+}
+
+.navbar-dropdown-content li:hover {
+  display: block;
+  width: fit-content;
+  padding-left: 0.1rem;
+  scale: 1.05;
 }

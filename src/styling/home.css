@@ -1,0 +1,10 @@
+.background-photo {
+  background-image: url('https://cre-tenbox.imgix.net/site%2Fstatic%2Fimages%2Fcity-image.v2.png');
+  height: 40vh;
+  width: 100vw;
+  margin-left: -1.5rem;
+  margin-top: -1.5rem;
+  background-position: 50% 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

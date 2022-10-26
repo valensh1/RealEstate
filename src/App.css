@@ -1,4 +1,5 @@
 @import './styling/navbar.css';
+@import './styling/home.css';
 
 html,
 body,
@@ -13,53 +14,4 @@ body,
 
 body {
   font-size: 1.5rem;
-}
-
-nav {
-  display: flex;
-  width: 100vw;
-  height: 5vh;
-  margin: auto;
-  /* margin: auto; */
-}
-
-ul {
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-  width: 80%;
-}
-
-li {
-  list-style: none;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.navbar-dropdown {
-  display: inline-block;
-}
-
-.navbar-dropdown-content {
-  display: none;
-  height: fit-content;
-  border: 3px solid blue;
-}
-
-.navbar-dropdown-content li {
-  margin: 0.5rem 0rem;
-}
-
-.navbar-dropdown-content a {
-  text-decoration: none;
-}
-
-.navbar-dropdown:hover .navbar-dropdown-content {
-  display: inline-block;
-  position: absolute;
-  padding-top: 1rem;
-}
-
-.navbar-dropdown-content li:hover {
-  background-color: aqua;
 }
