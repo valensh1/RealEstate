@@ -1,10 +1,47 @@
 .background-photo {
-  background-image: url('https://cre-tenbox.imgix.net/site%2Fstatic%2Fimages%2Fcity-image.v2.png');
+  background-image: linear-gradient(
+      to bottom,
+      rgba(123, 135, 243, 0.938),
+      rgba(206, 87, 19, 0.342)
+    ),
+    url('https://cre-tenbox.imgix.net/site%2Fstatic%2Fimages%2Fcity-image.v2.png');
+  background-position: 50% 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 40vh;
   width: 100vw;
   margin-left: -1.5rem;
   margin-top: -1.5rem;
-  background-position: 50% 70%;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+#home-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-line-container {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: fit-content;
+}
+
+.main-line {
+  color: white;
+  font-size: 5rem;
+  height: 0vh;
+  width: max-content;
+}
+
+#line1 {
+  word-spacing: 0rem;
+}
+
+#line2 {
+  word-spacing: 1.5rem;
+  font-size: 5.7rem;
 }
