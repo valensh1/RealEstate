@@ -1,0 +1,42 @@
+#hamburger-container {
+  position: relative;
+  top: -5.5vh;
+  left: 80%;
+  height: 3vh;
+  width: 2vw;
+  border: 3px solid red;
+  background-color: red;
+  border-radius: 5px;
+}
+
+#hamburger-icon svg {
+  position: absolute;
+  left: 0.25vw;
+  color: white;
+  font-size: 3vh;
+}
+
+#hamburger-hidden-container {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  position: relative;
+  right: 100%;
+}
+
+#hamburger-hidden {
+  display: none;
+  width: 10vw;
+  height: fit-content;
+  background-color: black;
+  border-radius: 5px;
+}
+
+#hamburger-hidden-container li a {
+  color: white;
+  text-decoration: none;
+}
+
+#hamburger-hidden-container li {
+  padding-top: 2vh;
+}

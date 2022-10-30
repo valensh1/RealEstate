@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineSearch, AiOutlineArrowRight } from 'react-icons/ai';
 
-function heroSearch() {
+function HeroSearch() {
   const btnClick = () => {
     console.log('You clicked me IDIOT!!!');
   };
@@ -37,4 +37,4 @@ function heroSearch() {
   );
 }
 
-export default heroSearch;
+export default HeroSearch;

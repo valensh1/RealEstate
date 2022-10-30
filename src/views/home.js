@@ -1,8 +1,9 @@
 import React from 'react';
 import Navbar from '../components/navbar';
 import HeroSearch from '../components/heroSearch';
+import Hamburger from '../components/hamburger';
 
-function home() {
+function Home() {
   const mainLine1 = 'THE SMARTER, FASTER, BETTER way';
   const mainLine2 = 'to transact commercial real estate';
 
@@ -10,6 +11,7 @@ function home() {
     <div id="home-container">
       <div className="background-photo">
         <Navbar />
+        <Hamburger />
         <HeroSearch />
       </div>
       <div className="main-line-container">
@@ -24,4 +26,4 @@ function home() {
   );
 }
 
-export default home;
+export default Home;

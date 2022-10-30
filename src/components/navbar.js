@@ -1,6 +1,6 @@
 import React from 'react';
 
-function navbar() {
+function Navbar() {
   const navbarLinks = ['Properties', 'Brokers', 'Sellers', 'Buyers'];
   const myProfileLink = ['My Profile'];
   const myProfileSelling = ['Marketing Center'];
@@ -76,4 +76,4 @@ function navbar() {
   );
 }
 
-export default navbar;
+export default Navbar;
