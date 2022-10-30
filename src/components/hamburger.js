@@ -1,4 +1,5 @@
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { AiOutlineClose } from 'react-icons/ai';
 import { useState } from 'react';
 
 function Hamburger() {
@@ -18,6 +19,9 @@ function Hamburger() {
   return (
     <div id="hamburger-container">
       <div id="hamburger-icon" onClick={hamburgerClick}>
+        <svg id="hidden-svg">
+          <AiOutlineClose />
+        </svg>
         <svg>
           <GiHamburgerMenu />
         </svg>

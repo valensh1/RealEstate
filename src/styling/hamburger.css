@@ -9,6 +9,18 @@
   border-radius: 5px;
 }
 
+#hamburger-icon #hidden-svg {
+  position: absolute;
+  top: -0.5vh;
+  left: 0;
+}
+
+#hamburger-icon #hidden-svg svg {
+  position: absolute;
+  font-size: 4vh;
+  display: none; /* makes hamburger appear and disappear */
+}
+
 #hamburger-icon svg {
   position: absolute;
   left: 0.25vw;
