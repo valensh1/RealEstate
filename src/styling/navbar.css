@@ -1,7 +1,7 @@
 nav {
   display: flex;
   width: 100vw;
-  height: 5vh;
+  height: 7vh;
   margin: auto;
   position: relative;
 }
@@ -16,6 +16,8 @@ nav {
 
 .logo > img {
   height: 7rem;
+  position: absolute;
+  top: -3vh;
 }
 
 .logo > h1 {

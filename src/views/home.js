@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/navbar';
+import HeroSearch from '../components/heroSearch';
 
 function home() {
   const mainLine1 = 'THE SMARTER, FASTER, BETTER way';
@@ -9,6 +10,7 @@ function home() {
     <div id="home-container">
       <div className="background-photo">
         <Navbar />
+        <HeroSearch />
       </div>
       <div className="main-line-container">
         <h1 className="main-line" id="line1">

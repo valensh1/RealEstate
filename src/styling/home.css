@@ -1,8 +1,11 @@
+@import './navbar.css';
+@import './heroSearch.css';
+
 .background-photo {
   background-image: linear-gradient(
       to bottom,
-      rgba(123, 135, 243, 0.938),
-      rgba(206, 87, 19, 0.342)
+      rgba(91, 100, 175, 0.938),
+      rgba(211, 10, 10, 0.342)
     ),
     url('https://cre-tenbox.imgix.net/site%2Fstatic%2Fimages%2Fcity-image.v2.png');
   background-position: 50% 70%;
@@ -12,6 +15,7 @@
   width: 100vw;
   margin-left: -1.5rem;
   margin-top: -1.5rem;
+  position: relative;
 }
 
 #home-container {

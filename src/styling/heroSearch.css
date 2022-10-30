@@ -1,0 +1,74 @@
+#hero-search {
+  width: 50vw;
+  height: 6vh;
+  position: absolute;
+  bottom: -2.5vh;
+  left: 25%;
+  background-color: white;
+  border-radius: 5px;
+  z-index: 1;
+  box-shadow: 1px 1px 30px black;
+  /* border: 5px solid red; */
+}
+
+#hero-search-content {
+  display: flex;
+  position: relative;
+}
+
+#search-icon {
+  position: absolute;
+  top: 0.75vh;
+  left: 0.25vw;
+  font-size: 4.5vh;
+  color: black;
+}
+
+input {
+  position: absolute;
+  left: 3vw;
+  top: 17.5%;
+  width: 50%;
+  height: 60%;
+  font-size: 1.5rem;
+}
+
+#hero-search-menu-btn {
+  position: relative;
+  left: 58%;
+  display: flex;
+  height: 5vh;
+  width: 20vw;
+}
+
+select {
+  position: absolute;
+  border-radius: 5px;
+  top: 20%;
+  height: 60%;
+  width: 55%;
+  font-size: 1.5rem;
+}
+
+#search-button {
+  position: absolute;
+  height: 60%;
+  width: 30%;
+  right: 1.5vw;
+  top: 20%;
+  display: flex;
+  align-items: center;
+  background-color: red;
+  color: white;
+  font-weight: 300;
+  font-size: 1.8rem;
+  border-radius: 5px;
+}
+
+#right-arrow {
+  color: white;
+  font-size: 2vh;
+  position: absolute;
+  top: 10%;
+  left: 70%;
+}

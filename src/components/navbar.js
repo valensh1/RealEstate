@@ -25,17 +25,17 @@ function navbar() {
         />
       </div>
       <ul>
-        {navbarLinks.map((link) => {
-          return <li>{link}</li>;
+        {navbarLinks.map((link, index) => {
+          return <li key={index}>{link}</li>;
         })}
         <div className="navbar-dropdown">
           <li>My Profile</li>
           <div className="navbar-dropdown-content">
             <div id="navbar-dropdown-selling">
               <p>SELLING</p>
-              {myProfileSelling.map((link) => {
+              {myProfileSelling.map((link, index) => {
                 return (
-                  <li>
+                  <li key={index}>
                     <a href="">{link}</a>
                   </li>
                 );
@@ -44,9 +44,9 @@ function navbar() {
             </div>
             <div id="navbar-drowdown-buying">
               <p>BUYING</p>
-              {myProfileBuying.map((link) => {
+              {myProfileBuying.map((link, index) => {
                 return (
-                  <li>
+                  <li key={index}>
                     <a href="">{link}</a>
                   </li>
                 );
@@ -55,9 +55,9 @@ function navbar() {
             </div>
             <div id="navbar-dropdown-account">
               <p>ACCOUNT</p>
-              {myProfileAccount.map((link) => {
+              {myProfileAccount.map((link, index) => {
                 return (
-                  <li>
+                  <li key={index}>
                     <a href="">{link}</a>
                   </li>
                 );
