@@ -3,27 +3,34 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { useState } from 'react';
 
 function Hamburger() {
-  const [isHamburgerOpen, setHamburgerOpen] = useState(false);
+  const [isHamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
 
   const hamburgerClick = (event) => {
     console.log('You clicked on the hamburger menu');
     const hiddenHamburgerContent = document.getElementById('hamburger-hidden');
-    if (isHamburgerOpen === false) {
+    const hamburgerIcon = document.getElementById('hamburger-svg');
+    const closeIcon = document.getElementById('hidden-svg');
+
+    if (!isHamburgerMenuOpen) {
       hiddenHamburgerContent.style.display = 'block';
+      closeIcon.style.display = 'block';
+      hamburgerIcon.style.display = 'none';
     } else {
       hiddenHamburgerContent.style.display = 'none';
+      closeIcon.style.display = 'none';
+      hamburgerIcon.style.display = 'block';
     }
-    setHamburgerOpen(!isHamburgerOpen);
+    setHamburgerMenuOpen(!isHamburgerMenuOpen);
   };
 
   return (
     <div id="hamburger-container">
       <div id="hamburger-icon" onClick={hamburgerClick}>
-        <svg id="hidden-svg">
-          <AiOutlineClose />
+        <svg className="svg-icons" id="hidden-svg">
+          <AiOutlineClose name="close-icon" />
         </svg>
-        <svg>
-          <GiHamburgerMenu />
+        <svg className="svg-icons" id="hamburger-svg">
+          <GiHamburgerMenu name="hamburger-icon" />
         </svg>
         <div id="hamburger-hidden-container">
           <ul id="hamburger-hidden">

@@ -15,13 +15,13 @@
   left: 0;
 }
 
-#hamburger-icon #hidden-svg svg {
+#hidden-svg {
   position: absolute;
   font-size: 4vh;
-  display: none; /* makes hamburger appear and disappear */
+  display: none; /*makes hamburger appear and disappear*/
 }
 
-#hamburger-icon svg {
+.svg-icons {
   position: absolute;
   left: 0.25vw;
   color: white;
