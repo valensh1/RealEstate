@@ -26,11 +26,11 @@ function FeaturedProperties() {
             <h5>Oct 31 - Nov 2, 2022</h5>
             <h5 className="property-type">Industrial</h5>
           </div>
-          <div>
+          <p className="star-icon">
+            <AiFillStar />
+          </p>
+          <div className="listing-card-img-container">
             <a href="">
-              <p className="star-icon">
-                <AiFillStar />
-              </p>
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/0/0b/SoFi_Stadium_2021.jpg"
                 alt=""
@@ -43,7 +43,7 @@ function FeaturedProperties() {
           </div>
           <div className="listing-card-name-address">
             <div className="featured-properties-listing-card-name listing-name">
-              <span>Industrial/Flex/Office | Brooklyn</span>
+              <span id="property-name">Industrial/Flex/Office | Brooklyn</span>
             </div>
             <div className="featured-properties-listing-address listing-address">
               <span>20 VAN DAM ST,</span>
@@ -57,7 +57,10 @@ function FeaturedProperties() {
             <h5>Oct 31 - Nov 2, 2022</h5>
             <h5 className="property-type">Industrial</h5>
           </div>
-          <div>
+          <p className="star-icon">
+            <AiFillStar />
+          </p>
+          <div className="listing-card-img-container">
             <a href="">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/0/0b/SoFi_Stadium_2021.jpg"
@@ -71,7 +74,7 @@ function FeaturedProperties() {
           </div>
           <div className="listing-card-name-address">
             <div className="featured-properties-listing-card-name listing-name">
-              <span>Industrial/Flex/Office | Brooklyn</span>
+              <span id="property-name">Industrial/Flex/Office | Brooklyn</span>
             </div>
             <div className="featured-properties-listing-address listing-address">
               <span>20 VAN DAM ST,</span>
@@ -85,7 +88,10 @@ function FeaturedProperties() {
             <h5>Oct 31 - Nov 2, 2022</h5>
             <h5 className="property-type">Industrial</h5>
           </div>
-          <div>
+          <p className="star-icon">
+            <AiFillStar />
+          </p>
+          <div className="listing-card-img-container">
             <a href="">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/0/0b/SoFi_Stadium_2021.jpg"
@@ -99,7 +105,7 @@ function FeaturedProperties() {
           </div>
           <div className="listing-card-name-address">
             <div className="featured-properties-listing-card-name listing-name">
-              <span>Industrial/Flex/Office | Brooklyn</span>
+              <span id="property-name">Industrial/Flex/Office | Brooklyn</span>
             </div>
             <div className="featured-properties-listing-address listing-address">
               <span>20 VAN DAM ST,</span>
@@ -113,7 +119,10 @@ function FeaturedProperties() {
             <h5>Oct 31 - Nov 2, 2022</h5>
             <h5 className="property-type">Industrial</h5>
           </div>
-          <div>
+          <p className="star-icon">
+            <AiFillStar />
+          </p>
+          <div className="listing-card-img-container">
             <a href="">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/0/0b/SoFi_Stadium_2021.jpg"
@@ -127,7 +136,7 @@ function FeaturedProperties() {
           </div>
           <div className="listing-card-name-address">
             <div className="featured-properties-listing-card-name listing-name">
-              <span>Industrial/Flex/Office | Brooklyn</span>
+              <span id="property-name">Industrial/Flex/Office | Brooklyn</span>
             </div>
             <div className="featured-properties-listing-address listing-address">
               <span>20 VAN DAM ST,</span>
