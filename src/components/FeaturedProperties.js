@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiOutlineArrowRight } from 'react-icons/ai';
+import { AiOutlineArrowRight, AiFillStar } from 'react-icons/ai';
 
 function FeaturedProperties() {
   return (
@@ -28,6 +28,9 @@ function FeaturedProperties() {
           </div>
           <div>
             <a href="">
+              <p className="star-icon">
+                <AiFillStar />
+              </p>
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/0/0b/SoFi_Stadium_2021.jpg"
                 alt=""
