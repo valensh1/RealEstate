@@ -44,7 +44,7 @@
 #featured-properties-listing-cards-container {
   position: relative;
   top: 3vh;
-  left: 20vw;
+  left: 22vw;
   display: flex;
   column-gap: 3vw;
 }
