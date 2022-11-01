@@ -2,8 +2,17 @@ import React from 'react';
 import { AiOutlineSearch, AiOutlineArrowRight } from 'react-icons/ai';
 
 function HeroSearch() {
-  const btnClick = () => {
-    console.log('You clicked me IDIOT!!!');
+  const propertyTypes = [
+    'Office',
+    'Multifamily',
+    'Retail',
+    'Hotel',
+    'Industrial',
+    'Other',
+  ];
+
+  const searchBtnClick = () => {
+    console.log('You clicked me!!!');
   };
 
   return (
@@ -17,15 +26,16 @@ function HeroSearch() {
           <div id="dropdown">
             <select name="property-types" id="property-types">
               <option>ALL PROPERTY TYPES</option>
-              <option value="Office">Office</option>
-              <option value="Multifamily">Multifamily</option>
-              <option value="Retail">Retail</option>
-              <option value="Hotel">Hotel</option>
-              <option value="Industrial">Industrial</option>
-              <option value="Other">Other</option>
+              {propertyTypes.map((type, index) => {
+                return (
+                  <option key={index} value={type}>
+                    {type}
+                  </option>
+                );
+              })}
             </select>
           </div>
-          <button onClick={btnClick} id="search-button">
+          <button onClick={searchBtnClick} id="search-button">
             SEARCH
             <svg className="react-icon" id="right-arrow">
               <AiOutlineArrowRight />

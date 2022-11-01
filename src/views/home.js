@@ -1,7 +1,8 @@
 import React from 'react';
-import Navbar from '../components/navbar';
-import HeroSearch from '../components/heroSearch';
-import Hamburger from '../components/hamburger';
+import Navbar from '../components/Navbar';
+import HeroSearch from '../components/HeroSearch';
+import Hamburger from '../components/Hamburger';
+import FeaturedProperties from '../components/FeaturedProperties';
 
 function Home() {
   const mainLine1 = 'THE SMARTER, FASTER, BETTER way';
@@ -22,6 +23,7 @@ function Home() {
           {mainLine2}
         </h1>
       </div>
+      <FeaturedProperties />
     </div>
   );
 }

@@ -4,6 +4,7 @@ nav {
   height: 7vh;
   margin: auto;
   position: relative;
+  font-family: var(--general-font-type);
 }
 
 .logo {
@@ -35,8 +36,9 @@ ul {
 li {
   list-style: none;
   font-size: 2rem;
-  font-weight: 700;
-  color: white;
+  font-weight: 400;
+  color: var(--generalWhite-color);
+  cursor: pointer;
 }
 
 .navbar-dropdown {

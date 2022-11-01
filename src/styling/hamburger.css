@@ -4,9 +4,10 @@
   left: 80%;
   height: 3vh;
   width: 2vw;
-  border: 3px solid red;
-  background-color: red;
+  border: 3px solid var(--homePage_SearchBtn_Hamburger-color);
+  background-color: var(--homePage_SearchBtn_Hamburger-color);
   border-radius: 5px;
+  cursor: pointer;
 }
 
 #hamburger-icon #hidden-svg {
@@ -51,4 +52,13 @@
 
 #hamburger-hidden-container li {
   padding-top: 2vh;
+}
+
+li a,
+span {
+  font-weight: 200;
+}
+
+#hamburger-hidden-container li:hover {
+  scale: 1.02;
 }

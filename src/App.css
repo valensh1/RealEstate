@@ -1,10 +1,21 @@
 @import './styling/home.css';
 
+:root {
+  --general-font-type: sans-serif;
+
+  /* Colors */
+  --generalWhite-color: white;
+  --listingCards-color: rgba(232, 229, 229, 0.849);
+  --listingCards-bidPrice-color: rgb(91, 15, 91);
+  --homePage_SearchBtn_Hamburger-color: #ce2027;
+}
+
 html,
 body,
 .App {
   box-sizing: border-box;
   font-size: 62.5%; /* Everything is based upon 10px with this. 10px / 16px = .625. With this 1rem will = 10px. */
+  font-family: sans-serif;
   height: 100vh;
   width: 100vw;
   background-color: white;

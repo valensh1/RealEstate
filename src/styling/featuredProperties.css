@@ -1,0 +1,85 @@
+#featured-properties {
+  position: relative;
+  width: 100vw;
+  top: 7vh;
+  color: black;
+}
+
+#featured-heading-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  left: 0vw;
+  width: 100vw;
+}
+
+#featured-heading {
+  font-size: 4vh;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+
+#view-properties-link a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+}
+
+#featured-properties span {
+  font-size: 1.2vh;
+  font-weight: 400;
+}
+
+#featured-properties svg {
+  position: relative;
+  margin-right: 0.5vw;
+  font-size: 2vh;
+}
+
+#featured-properties-listing-cards-container {
+  position: relative;
+  top: 3vh;
+  left: 20vw;
+  display: flex;
+  column-gap: 3vw;
+}
+
+.featured-properties-listing-card-headings {
+  font-size: 1.2vh;
+  line-height: 0.25vh;
+}
+
+.property-type {
+  margin-top: 3vh;
+}
+
+.featured-properties-single-listing-card {
+  background-color: var(--listingCards-color);
+  border-radius: 5px;
+}
+
+a > img {
+  height: 25vh;
+  width: 12vw;
+  border-radius: 5px;
+}
+
+.listing-card-bid-price {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 3vh;
+  background-color: var(--listingCards-bidPrice-color);
+  color: var(--generalWhite-color);
+  border-radius: 5px;
+}
+
+.featured-properties-listing-address {
+  display: flex;
+  flex-direction: column;
+}

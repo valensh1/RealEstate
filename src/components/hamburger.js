@@ -6,7 +6,6 @@ function Hamburger() {
   const [isHamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
 
   const hamburgerClick = (event) => {
-    console.log('You clicked on the hamburger menu');
     const hiddenHamburgerContent = document.getElementById('hamburger-hidden');
     const hamburgerIcon = document.getElementById('hamburger-svg');
     const closeIcon = document.getElementById('hidden-svg');
@@ -59,7 +58,17 @@ function Hamburger() {
               <a href="">Help Center</a>
             </li>
             <li>
-              <a href="">Contact</a>
+              <a href="">
+                Contact
+                <br />
+                888 770-7332
+                <br />
+                Mon-Fri 9am-8pm ET
+              </a>
+            </li>
+            <li>
+              {' '}
+              <span>© 2022 CoStar Group</span>
             </li>
           </ul>
         </div>

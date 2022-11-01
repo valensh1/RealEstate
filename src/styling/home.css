@@ -1,6 +1,7 @@
 @import './navbar.css';
 @import './hamburger.css';
 @import './heroSearch.css';
+@import './featuredProperties.css';
 
 .background-photo {
   background-image: linear-gradient(
@@ -24,11 +25,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-line-container {
   display: flex;
   position: absolute;
+  top: 13vh;
   flex-direction: column;
   justify-items: center;
   align-items: center;
@@ -38,6 +42,8 @@
 .main-line {
   color: white;
   font-size: 5rem;
+  font-family: var(--general-font-type);
+  font-weight: 400;
   height: 0vh;
   width: max-content;
 }
