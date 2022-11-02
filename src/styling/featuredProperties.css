@@ -2,7 +2,7 @@
   position: relative;
   width: 100vw;
   top: 7vh;
-  left: 5vw;
+  left: 3vw;
   color: black;
 }
 
@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: space-around;
   position: relative;
-  left: 5vw;
+  left: 6.5vw;
   width: 80vw;
 }
 
@@ -28,7 +28,6 @@
   justify-items: center;
   justify-content: center;
   text-decoration: none;
-  color: black;
 }
 
 #featured-properties span {
@@ -54,8 +53,8 @@
   position: relative;
   background-color: var(--listingCards-color);
   border-radius: 5px;
-  width: 9vw;
-  height: 40vh;
+  width: 11vw;
+  height: 43vh;
   text-align: center;
 }
 
@@ -75,11 +74,12 @@
   position: absolute;
   left: 0.6vw;
   color: white;
+  cursor: pointer;
 }
 
 a > img {
   height: 18vh;
-  width: 8vw;
+  width: 10vw;
   border-radius: 5px;
 }
 
@@ -89,9 +89,9 @@ a > img {
   align-items: center;
   position: relative;
   left: 0.5vw;
-  top: 0.5vh;
+  top: 0.75vh;
   height: 4vh;
-  width: 8vw;
+  width: 10vw;
   background-color: var(--listingCards-bidPrice-color);
   color: var(--generalWhite-color);
   border-radius: 5px;
@@ -101,7 +101,7 @@ a > img {
 .featured-properties-listing-card-name {
   position: relative;
   left: 0.5vw;
-  margin-top: 1vh;
+  margin-top: 2vh;
   text-align: left;
 }
 

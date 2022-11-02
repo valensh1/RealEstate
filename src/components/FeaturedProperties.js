@@ -1,9 +1,21 @@
-import React from 'react';
-import { AiOutlineArrowRight, AiFillStar } from 'react-icons/ai';
+import { useState } from 'react';
+import { AiOutlineArrowRight, AiFillStar, AiOutlineStar } from 'react-icons/ai';
+import { v4 as uuidv4 } from 'uuid';
 
 function FeaturedProperties() {
+  const [isStarClicked, setIsStarClicked] = useState(false);
+
+  const starClick = (event) => {
+    console.log('You clicked on the star');
+    console.log(event.target.id);
+    console.log(event.currentTarget.id);
+    console.log(event.currentTarget.getAttribute('name'));
+    setIsStarClicked(!isStarClicked);
+    return <p>Hello dude!!!</p>;
+  };
+
   return (
-    <div id="featured-properties">
+    <div id="featured-properties" onClick={starClick}>
       <div id="featured-heading-section">
         <h1 id="featured-heading">Featured Properties</h1>
 
@@ -26,8 +38,13 @@ function FeaturedProperties() {
             <h5>Oct 31 - Nov 2, 2022</h5>
             <h5 className="property-type">Industrial</h5>
           </div>
-          <p className="star-icon">
-            <AiFillStar />
+          <p
+            className="star-icon"
+            onClick={starClick}
+            name="test-yo"
+            id={uuidv4()}
+          >
+            {isStarClicked ? <AiFillStar /> : <AiOutlineStar />}
           </p>
           <div className="listing-card-img-container">
             <a href="">
@@ -57,8 +74,8 @@ function FeaturedProperties() {
             <h5>Oct 31 - Nov 2, 2022</h5>
             <h5 className="property-type">Industrial</h5>
           </div>
-          <p className="star-icon">
-            <AiFillStar />
+          <p className="star-icon" onClick={starClick}>
+            {isStarClicked ? <AiFillStar /> : <AiOutlineStar />}
           </p>
           <div className="listing-card-img-container">
             <a href="">
@@ -88,8 +105,8 @@ function FeaturedProperties() {
             <h5>Oct 31 - Nov 2, 2022</h5>
             <h5 className="property-type">Industrial</h5>
           </div>
-          <p className="star-icon">
-            <AiFillStar />
+          <p className="star-icon" onClick={starClick}>
+            {isStarClicked ? <AiFillStar /> : <AiOutlineStar />}
           </p>
           <div className="listing-card-img-container">
             <a href="">
@@ -119,8 +136,8 @@ function FeaturedProperties() {
             <h5>Oct 31 - Nov 2, 2022</h5>
             <h5 className="property-type">Industrial</h5>
           </div>
-          <p className="star-icon">
-            <AiFillStar />
+          <p className="star-icon" onClick={starClick}>
+            {isStarClicked ? <AiFillStar /> : <AiOutlineStar />}
           </p>
           <div className="listing-card-img-container">
             <a href="">

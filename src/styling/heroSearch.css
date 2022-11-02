@@ -73,3 +73,12 @@ select {
   top: 10%;
   left: 70%;
 }
+
+#search-button:hover {
+  background-color: white;
+  color: red;
+}
+
+#search-button:hover svg {
+  color: red;
+}
