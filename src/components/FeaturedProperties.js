@@ -6,16 +6,22 @@ function FeaturedProperties() {
   const [isStarClicked, setIsStarClicked] = useState(false);
 
   const starClick = (event) => {
-    console.log('You clicked on the star');
-    console.log(event.target.id);
-    console.log(event.currentTarget.id);
-    console.log(event.currentTarget.getAttribute('name'));
     setIsStarClicked(!isStarClicked);
-    return <p>Hello dude!!!</p>;
+    const element = event.currentTarget.id;
+
+    console.log(`Target ID ${event.currentTarget.id}`);
+
+    console.log('You clicked on the star');
+    console.log(`Target ID ${event.target.id}`);
+    console.log(`Current Target ${event.currentTarget.id}`);
+    console.log(
+      `Current Target get attribute ${event.currentTarget.getAttribute('name')}`
+    );
+    // setIsStarClicked(!isStarClicked);
   };
 
   return (
-    <div id="featured-properties" onClick={starClick}>
+    <div id="featured-properties">
       <div id="featured-heading-section">
         <h1 id="featured-heading">Featured Properties</h1>
 
@@ -31,6 +37,7 @@ function FeaturedProperties() {
       <div
         id="featured-properties-listing-cards-container"
         className="featured-properties-listing-cards-container"
+        onClick={starClick}
       >
         <div className="featured-properties-single-listing-card listing-cards">
           <div className="featured-properties-listing-card-headings">
@@ -44,7 +51,8 @@ function FeaturedProperties() {
             name="test-yo"
             id={uuidv4()}
           >
-            {isStarClicked ? <AiFillStar /> : <AiOutlineStar />}
+            <AiFillStar />
+            {/* {isStarClicked ? <AiFillStar /> : <AiOutlineStar />} */}
           </p>
           <div className="listing-card-img-container">
             <a href="">
