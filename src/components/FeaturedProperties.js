@@ -1,23 +1,40 @@
 import { useState } from 'react';
 import { AiOutlineArrowRight, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { v4 as uuidv4 } from 'uuid';
+import { createRoot } from 'react-dom/client';
+import { ReactSVG } from 'react-svg';
 
 function FeaturedProperties() {
   const [isStarClicked, setIsStarClicked] = useState(false);
 
   const starClick = (event) => {
-    setIsStarClicked(!isStarClicked);
-    const element = event.currentTarget.id;
-
-    console.log(`Target ID ${event.currentTarget.id}`);
-
-    console.log('You clicked on the star');
-    console.log(`Target ID ${event.target.id}`);
-    console.log(`Current Target ${event.currentTarget.id}`);
-    console.log(
-      `Current Target get attribute ${event.currentTarget.getAttribute('name')}`
-    );
     // setIsStarClicked(!isStarClicked);
+    const idOfStarClicked = event.target.parentElement.id;
+    console.log(idOfStarClicked);
+    if (
+      event.target.parentElement.getAttribute('is_checked') === 'not_checked'
+    ) {
+      document
+        .getElementById(idOfStarClicked)
+        .setAttribute('is_checked', 'checked');
+      event.target.remove();
+      return (
+        <h3>
+          <AiFillStar />
+        </h3>
+      );
+      //   const container = document.getElementById(idOfStarClicked);
+      //   const root = createRoot(container);
+      //   root.render(<AiFillStar />);
+    } else {
+      document
+        .getElementById(idOfStarClicked)
+        .setAttribute('is_checked', 'not_checked');
+
+      //   const container = document.getElementById(idOfStarClicked);
+      //   const root = createRoot(container);
+      //   root.render(<AiOutlineStar />);
+    }
   };
 
   return (
@@ -47,11 +64,12 @@ function FeaturedProperties() {
           </div>
           <p
             className="star-icon"
-            onClick={starClick}
-            name="test-yo"
-            id={uuidv4()}
+            // onClick={starClick}
+            is_checked="not_checked"
+            id="1"
           >
-            <AiFillStar />
+            <AiOutlineStar />
+
             {/* {isStarClicked ? <AiFillStar /> : <AiOutlineStar />} */}
           </p>
           <div className="listing-card-img-container">
