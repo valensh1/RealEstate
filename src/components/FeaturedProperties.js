@@ -23,33 +23,33 @@ function FeaturedProperties() {
   };
 
   const starClick = (event) => {
-    // setIsStarClicked(!isStarClicked);
-    const idOfStarClicked = event.target.parentElement.id;
-    console.log(idOfStarClicked);
-    if (
-      event.target.parentElement.getAttribute('is_checked') === 'not_checked'
-    ) {
-      document
-        .getElementById(idOfStarClicked)
-        .setAttribute('is_checked', 'checked');
-      event.target.remove();
-      return (
-        <h3>
-          <AiFillStar />
-        </h3>
-      );
-      //   const container = document.getElementById(idOfStarClicked);
-      //   const root = createRoot(container);
-      //   root.render(<AiFillStar />);
-    } else {
-      document
-        .getElementById(idOfStarClicked)
-        .setAttribute('is_checked', 'not_checked');
-
-      //   const container = document.getElementById(idOfStarClicked);
-      //   const root = createRoot(container);
-      //   root.render(<AiOutlineStar />);
+    // console.log(event.target.innerHTML);
+    console.log(`Favorite from favorite: ${favorites[0].favorite}`);
+    console.log(`Favorites ID: ${favorites[0].id}`);
+    console.log(`Event ID: ${event.target.id}`);
+    // console.log(`Parent Element: ${event.target.parentElement}`);
+    // console.log(`Event ID: ${event.target.parentElement.id}`);
+    console.log(
+      `Do they equal each other?: ${favorites[0].id === +event.target.id}`
+    );
+    for (let property of favorites) {
+      if (property.id === +event.target.id) {
+        console.log(`Property favorite ${property.favorite}`);
+        console.log(`Typeof: ${typeof property.favorite}`);
+        property.favorite = !property.favorite;
+        break;
+      }
     }
+    setFavorites([...favorites]);
+    setIsStarClicked(!isStarClicked);
+    console.log(`Favorite from favorite: ${favorites[0].favorite}`);
+    console.log(`Favorites ID: ${favorites[0].id}`);
+    console.log(`Event ID: ${event.target.id}`);
+    // console.log(`Parent Element: ${event.target.parentElement}`);
+    // console.log(`Event ID: ${event.target.parentElement.id}`);
+    console.log(
+      `Do they equal each other?: ${favorites[0].id === +event.target.id}`
+    );
   };
 
   return (
@@ -73,22 +73,16 @@ function FeaturedProperties() {
       >
         <div className="featured-properties-single-listing-card listing-cards">
           <div className="featured-properties-listing-card-headings">
-            <h5>{`Online ${featuredPropertiesModel[0].saleType}`}</h5>
-            <h5>{featuredPropertiesModel[0].auctionDates}</h5>
-            <h5 className="property-type">
-              {featuredPropertiesModel[0].propertyType}
-            </h5>
+            <h5>{`Online ${favorites[0].saleType}`}</h5>
+            <h5>{favorites[0].auctionDates}</h5>
+            <h5 className="property-type">{favorites[0].propertyType}</h5>
           </div>
-          <p
-            className="star-icon"
-            // onClick={starClick}
-            is_checked="not_checked"
-            id="1"
-          >
-            <AiOutlineStar />
+          {favorites[0].favorite ? (
+            <AiFillStar className="star-icon" id={favorites[0].id} />
+          ) : (
+            <AiOutlineStar className="star-icon" id={favorites[0].id} />
+          )}
 
-            {/* {isStarClicked ? <AiFillStar /> : <AiOutlineStar />} */}
-          </p>
           <div className="listing-card-img-container">
             <a href="">
               <img
@@ -99,9 +93,7 @@ function FeaturedProperties() {
           </div>
           <div className="listing-card-bid-price">
             <span>Starting Bid</span>
-            <span>
-              {currencyFormatter(featuredPropertiesModel[0].startingBid)}
-            </span>
+            <span>{currencyFormatter(favorites[0].startingBid)}</span>
           </div>
           <div className="listing-card-name-address">
             <div className="featured-properties-listing-card-name listing-name">
@@ -113,7 +105,42 @@ function FeaturedProperties() {
             </div>
           </div>
         </div>
+
         <div className="featured-properties-single-listing-card listing-cards">
+          <div className="featured-properties-listing-card-headings">
+            <h5>{`Online ${favorites[1].saleType}`}</h5>
+            <h5>{favorites[1].auctionDates}</h5>
+            <h5 className="property-type">{favorites[1].propertyType}</h5>
+          </div>
+          {favorites[1].favorite ? (
+            <AiFillStar className="star-icon" id={favorites[1].id} />
+          ) : (
+            <AiOutlineStar className="star-icon" id={favorites[1].id} />
+          )}
+
+          <div className="listing-card-img-container">
+            <a href="">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/0/0b/SoFi_Stadium_2021.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div className="listing-card-bid-price">
+            <span>Starting Bid</span>
+            <span>{currencyFormatter(favorites[1].startingBid)}</span>
+          </div>
+          <div className="listing-card-name-address">
+            <div className="featured-properties-listing-card-name listing-name">
+              <span id="property-name">Industrial/Flex/Office | Brooklyn</span>
+            </div>
+            <div className="featured-properties-listing-address listing-address">
+              <span>20 VAN DAM ST,</span>
+              <span>BROOKLYN, NY 11222</span>
+            </div>
+          </div>
+        </div>
+        {/* <div className="featured-properties-single-listing-card listing-cards">
           <div className="featured-properties-listing-card-headings">
             <h5>Online Auction</h5>
             <h5>Oct 31 - Nov 2, 2022</h5>
@@ -205,7 +232,7 @@ function FeaturedProperties() {
               <span>BROOKLYN, NY 11222</span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

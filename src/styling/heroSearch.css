@@ -20,6 +20,7 @@
   left: 0.25vw;
   font-size: 4vh;
   color: black;
+  cursor: pointer;
 }
 
 input {
@@ -77,6 +78,7 @@ select {
 #search-button:hover {
   background-color: white;
   color: red;
+  cursor: pointer;
 }
 
 #search-button:hover svg {
