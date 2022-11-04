@@ -1,11 +1,26 @@
 import { useState } from 'react';
 import { AiOutlineArrowRight, AiFillStar, AiOutlineStar } from 'react-icons/ai';
-import { v4 as uuidv4 } from 'uuid';
-import { createRoot } from 'react-dom/client';
-import { ReactSVG } from 'react-svg';
+import { featuredPropertiesModel } from '../Model/FeaturedProperties_Model';
+// import { v4 as uuidv4 } from 'uuid';
+// import { createRoot } from 'react-dom/client';
+// import { ReactSVG } from 'react-svg';
 
 function FeaturedProperties() {
+  const [favorites, setFavorites] = useState(featuredPropertiesModel);
+  console.log(favorites);
   const [isStarClicked, setIsStarClicked] = useState(false);
+
+  const currencyFormatter = (amount) => {
+    let numberOptions = {
+      style: 'currency', // Shows dollar signs. Other options here are 'decimal', 'percent' and 'unit'.
+      currency: 'USD', // Could use 'EUR' for the euro or 'CNY' here for Chinese RMB; If style above is currency then CURRENCY MUST BE PROVIDED AS OPTION HERE!
+      currencySign: 'standard', // Could also use 'accounting' as an option here but didn't see a difference in formatting when tried.
+      // unit: 'mile-per-hour', // Use with style: unit
+      maximumFractionDigits: '0', // SHOWS NO CENTS; UNCOMMENT THIS OUT IF YOU WANT TO SHOW CENTS.
+    };
+    console.log(Intl.NumberFormat('en-US', numberOptions).format(amount));
+    return Intl.NumberFormat('en-US', numberOptions).format(amount);
+  };
 
   const starClick = (event) => {
     // setIsStarClicked(!isStarClicked);
@@ -58,9 +73,11 @@ function FeaturedProperties() {
       >
         <div className="featured-properties-single-listing-card listing-cards">
           <div className="featured-properties-listing-card-headings">
-            <h5>Online Auction</h5>
-            <h5>Oct 31 - Nov 2, 2022</h5>
-            <h5 className="property-type">Industrial</h5>
+            <h5>{`Online ${featuredPropertiesModel[0].saleType}`}</h5>
+            <h5>{featuredPropertiesModel[0].auctionDates}</h5>
+            <h5 className="property-type">
+              {featuredPropertiesModel[0].propertyType}
+            </h5>
           </div>
           <p
             className="star-icon"
@@ -82,7 +99,9 @@ function FeaturedProperties() {
           </div>
           <div className="listing-card-bid-price">
             <span>Starting Bid</span>
-            <span>$1,800,000</span>
+            <span>
+              {currencyFormatter(featuredPropertiesModel[0].startingBid)}
+            </span>
           </div>
           <div className="listing-card-name-address">
             <div className="featured-properties-listing-card-name listing-name">
