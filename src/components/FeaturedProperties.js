@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { AiOutlineArrowRight, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { featuredPropertiesModel } from '../Model/FeaturedProperties_Model';
+
 // import { v4 as uuidv4 } from 'uuid';
 // import { createRoot } from 'react-dom/client';
 // import { ReactSVG } from 'react-svg';
@@ -23,17 +24,11 @@ function FeaturedProperties() {
   };
 
   const starClick = (event) => {
-    // console.log(event.target.innerHTML);
-    console.log(`Favorite from favorite: ${favorites[0].favorite}`);
-    console.log(`Favorites ID: ${favorites[0].id}`);
-    console.log(`Event ID: ${event.target.id}`);
-    // console.log(`Parent Element: ${event.target.parentElement}`);
-    // console.log(`Event ID: ${event.target.parentElement.id}`);
-    console.log(
-      `Do they equal each other?: ${favorites[0].id === +event.target.id}`
-    );
     for (let property of favorites) {
-      if (property.id === +event.target.id) {
+      if (
+        property.id === +event.target.id || // Or statement required because for some reason when inserting the SVG after the first click on favorites star icon it doesn't recognize the click event at the svg level but recognizes it down at the svg path child level and so the id is not located there but on the svg level and so the event.target only picks up id at the svg level and it needs to be picked up on either parent or child level to get the id. Seems like a glitch
+        property.id === +event.target.parentElement.id
+      ) {
         console.log(`Property favorite ${property.favorite}`);
         console.log(`Typeof: ${typeof property.favorite}`);
         property.favorite = !property.favorite;
@@ -41,15 +36,6 @@ function FeaturedProperties() {
       }
     }
     setFavorites([...favorites]);
-    setIsStarClicked(!isStarClicked);
-    console.log(`Favorite from favorite: ${favorites[0].favorite}`);
-    console.log(`Favorites ID: ${favorites[0].id}`);
-    console.log(`Event ID: ${event.target.id}`);
-    // console.log(`Parent Element: ${event.target.parentElement}`);
-    // console.log(`Event ID: ${event.target.parentElement.id}`);
-    console.log(
-      `Do they equal each other?: ${favorites[0].id === +event.target.id}`
-    );
   };
 
   return (
