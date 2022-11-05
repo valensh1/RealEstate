@@ -1,23 +1,12 @@
 import { useState } from 'react';
-import { AiOutlineArrowRight, AiFillStar, AiOutlineStar } from 'react-icons/ai';
+import { AiOutlineArrowRight, AiFillStar, AiOutlineStar } from 'react-icons/ai'; // importing svg's to use from react-icons dependency
 import { featuredPropertiesModel } from '../Model/FeaturedProperties_Model';
 import ListingCards from './ListingCards';
 
 function FeaturedProperties() {
   const [favorites, setFavorites] = useState(featuredPropertiesModel);
 
-  const currencyFormatter = (amount) => {
-    let numberOptions = {
-      style: 'currency', // Shows dollar signs. Other options here are 'decimal', 'percent' and 'unit'.
-      currency: 'USD', // Could use 'EUR' for the euro or 'CNY' here for Chinese RMB; If style above is currency then CURRENCY MUST BE PROVIDED AS OPTION HERE!
-      currencySign: 'standard', // Could also use 'accounting' as an option here but didn't see a difference in formatting when tried.
-      // unit: 'mile-per-hour', // Use with style: unit
-      maximumFractionDigits: '0', // SHOWS NO CENTS; UNCOMMENT THIS OUT IF YOU WANT TO SHOW CENTS.
-    };
-    console.log(Intl.NumberFormat('en-US', numberOptions).format(amount));
-    return Intl.NumberFormat('en-US', numberOptions).format(amount);
-  };
-
+  // Click event which finds the property that was clicked and changes the favorite key/value pair from the featuredProperties object to the opposite
   const starClick = (event) => {
     for (let property of favorites) {
       if (
@@ -50,77 +39,8 @@ function FeaturedProperties() {
         className="featured-properties-listing-cards-container"
         onClick={starClick}
       >
-        <div className="featured-properties-single-listing-card listing-cards">
-          <div className="featured-properties-listing-card-headings">
-            <h5>{`Online ${favorites[0].saleType}`}</h5>
-            <h5>{favorites[0].auctionDates}</h5>
-            <h5 className="property-type">{favorites[0].propertyType}</h5>
-          </div>
-          {favorites[0].favorite ? (
-            <AiFillStar className="star-icon" id={favorites[0].id} />
-          ) : (
-            <AiOutlineStar className="star-icon" id={favorites[0].id} />
-          )}
-
-          <div className="listing-card-img-container">
-            <a href="">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/0/0b/SoFi_Stadium_2021.jpg"
-                alt=""
-              />
-            </a>
-          </div>
-          <div className="listing-card-bid-price">
-            <span>Starting Bid</span>
-            <span>{currencyFormatter(favorites[0].startingBid)}</span>
-          </div>
-          <div className="listing-card-name-address">
-            <div className="featured-properties-listing-card-name listing-name">
-              <span id="property-name">Industrial/Flex/Office | Brooklyn</span>
-            </div>
-            <div className="featured-properties-listing-address listing-address">
-              <span>20 VAN DAM ST,</span>
-              <span>BROOKLYN, NY 11222</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="featured-properties-single-listing-card listing-cards">
-          <div className="featured-properties-listing-card-headings">
-            <h5>{`Online ${favorites[1].saleType}`}</h5>
-            <h5>{favorites[1].auctionDates}</h5>
-            <h5 className="property-type">{favorites[1].propertyType}</h5>
-          </div>
-          {favorites[1].favorite ? (
-            <AiFillStar className="star-icon" id={favorites[1].id} />
-          ) : (
-            <AiOutlineStar className="star-icon" id={favorites[1].id} />
-          )}
-
-          <div className="listing-card-img-container">
-            <a href="">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/0/0b/SoFi_Stadium_2021.jpg"
-                alt=""
-              />
-            </a>
-          </div>
-          <div className="listing-card-bid-price">
-            <span>Starting Bid</span>
-            <span>{currencyFormatter(favorites[1].startingBid)}</span>
-          </div>
-          <div className="listing-card-name-address">
-            <div className="featured-properties-listing-card-name listing-name">
-              <span id="property-name">Industrial/Flex/Office | Brooklyn</span>
-            </div>
-            <div className="featured-properties-listing-address listing-address">
-              <span>20 VAN DAM ST,</span>
-              <span>BROOKLYN, NY 11222</span>
-            </div>
-          </div>
-        </div>
+        <ListingCards listings={favorites} />
       </div>
-      <ListingCards listings={favorites} />
     </div>
   );
 }
