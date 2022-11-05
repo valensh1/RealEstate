@@ -72,9 +72,9 @@
 
 .star-icon {
   position: absolute;
-  left: -4.4vw;
+  top: 3vh;
+  left: -4.2vw;
   color: white;
-  /* border: 3px solid red; */
   cursor: pointer;
 }
 
