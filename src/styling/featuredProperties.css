@@ -43,7 +43,7 @@
 
 /* Carousel arrows */
 #featured-properties .carousel-arrows {
-  color: gray;
+  color: var(--listingCards-color);
   font-size: 6rem;
 }
 
