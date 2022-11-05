@@ -41,6 +41,30 @@
   font-size: 2vh;
 }
 
+/* Carousel arrows */
+#featured-properties .carousel-arrows {
+  color: gray;
+  font-size: 6rem;
+}
+
+#featured-properties .carousel-arrows:hover {
+  color: var(--homePage_reddish-color);
+  scale: 1.1;
+  cursor: pointer;
+}
+
+#featured-properties #right-carousel-arrow {
+  position: absolute;
+  top: 17.5vh;
+  right: 42.5vw;
+}
+
+#featured-properties #left-carousel-arrow {
+  position: absolute;
+  top: 17.5vh;
+  left: -4vw;
+}
+
 #featured-properties-listing-cards-container {
   position: relative;
   top: 3vh;

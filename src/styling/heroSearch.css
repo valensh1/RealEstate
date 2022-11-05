@@ -58,7 +58,7 @@ select {
   top: 20%;
   display: flex;
   align-items: center;
-  background-color: #ce2027;
+  background-color: var(--homePage_reddish-color);
   color: white;
   font-weight: 300;
   font-size: 1.8rem;
@@ -77,10 +77,10 @@ select {
 
 #search-button:hover {
   background-color: white;
-  color: red;
+  color: var(--homePage_reddish-color);
   cursor: pointer;
 }
 
 #search-button:hover svg {
-  color: red;
+  color: var(--homePage_reddish-color);
 }

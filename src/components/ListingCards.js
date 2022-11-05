@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiOutlineArrowRight, AiFillStar, AiOutlineStar } from 'react-icons/ai'; // importing svg's to use from react-icons dependency
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai'; // importing svg's to use from react-icons dependency
 
 function ListingCards(props) {
   // Destructuring of props

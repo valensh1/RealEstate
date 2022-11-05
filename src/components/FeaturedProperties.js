@@ -1,5 +1,9 @@
 import { useState } from 'react';
-import { AiOutlineArrowRight, AiFillStar, AiOutlineStar } from 'react-icons/ai'; // importing svg's to use from react-icons dependency
+import { AiOutlineArrowRight } from 'react-icons/ai'; // importing svg's to use from react-icons dependency
+import {
+  BsFillArrowRightCircleFill,
+  BsFillArrowLeftCircleFill,
+} from 'react-icons/bs';
 import { featuredPropertiesModel } from '../Model/FeaturedProperties_Model';
 import ListingCards from './ListingCards';
 
@@ -40,6 +44,14 @@ function FeaturedProperties() {
         onClick={starClick}
       >
         <ListingCards listings={favorites} />
+        <BsFillArrowLeftCircleFill
+          id="left-carousel-arrow"
+          className="carousel-arrows"
+        />
+        <BsFillArrowRightCircleFill
+          id="right-carousel-arrow"
+          className="carousel-arrows"
+        />
       </div>
     </div>
   );
