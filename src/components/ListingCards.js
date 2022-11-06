@@ -37,6 +37,17 @@ function ListingCards(props) {
             ) : (
               <AiOutlineStar className="star-icon" id={card?.id} />
             )}
+            <div className="listing-card-banners-container">
+              {card?.banners?.map((banner) => {
+                return (
+                  <div className="listing-card-banner" id="listing-card-banner">
+                    <span className="banner" id="banner">
+                      {banner}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
 
             <div className="listing-card-img-container">
               <a href="">

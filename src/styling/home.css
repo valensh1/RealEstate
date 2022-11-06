@@ -2,6 +2,7 @@
 @import './hamburger.css';
 @import './heroSearch.css';
 @import './featuredProperties.css';
+@import './listingCards.css';
 
 .background-photo {
   background-image: linear-gradient(
@@ -55,4 +56,143 @@
 #line2 {
   word-spacing: 1.5rem;
   font-size: 5.7rem;
+}
+
+/* Power of Platform Section */
+#power-of-platform {
+  background-image: url('https://cre-tenbox.imgix.net/site%2Fstatic%2Fbuildings.v1.png');
+  background-position: 50% 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 50vh;
+  color: white;
+  font-size: 1.5vh;
+  position: relative;
+}
+
+#power-of-platform > h1 {
+  margin-top: 5.5vh;
+  font-size: 5vh;
+  font-weight: 400;
+  width: 50vw;
+  margin-left: 25vw;
+  line-height: 6vh;
+}
+
+#power-of-platform h2 {
+  margin-top: 3.5vh;
+  font-size: 2.5vh;
+  font-weight: 400;
+}
+
+#power-of-platform p {
+  margin-top: 3.5vh;
+  font-size: 1.5vh;
+  font-weight: 100;
+  opacity: 0.7;
+  width: 16.67vw;
+  position: absolute;
+  bottom: 17vh;
+}
+
+#buy-and-sell-faster > #buy-and-sell-faster-paragraph {
+  position: absolute;
+  bottom: 18.5vh;
+}
+
+#power-of-platform-sections-container {
+  display: flex;
+  justify-content: center;
+}
+
+.power-of-platform {
+  width: 16.67vw;
+  margin-left: 3vw;
+}
+
+#power-of-platform-sections-container button {
+  background-color: var(--homePage_reddish-color);
+  color: white;
+  height: 3vh;
+  font-size: 1.3vh;
+  border-radius: 5px;
+  border: 2px solid var(--homePage_reddish-color);
+  position: absolute;
+  bottom: 11.5vh;
+}
+
+/* Put the Ten-X platform to work for you section */
+#platform-to-work {
+  background-image: url('https://cre-tenbox.imgix.net/site%2Fstatic%2FTXBrand_Creative_Territories_Deck01.v1.png?auto=format,compress');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 62.5vh;
+  width: 35vw;
+  position: relative;
+  left: -32.5vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#platform-to-work > h1 {
+  position: relative;
+  top: 6vh;
+  left: 35vw;
+  font-size: 5vh;
+  font-weight: 400;
+  width: 50vw;
+  word-spacing: 0.25vw;
+}
+
+#platform-to-work-section {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  left: 35vw;
+  width: 50vw;
+}
+
+#platform-to-work-brokers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 16.67vw;
+}
+
+#platform-to-work h3 {
+  margin-top: 7vh;
+  font-size: 2.2vh;
+  font-weight: 400;
+}
+
+#platform-to-work h4 {
+  font-size: 1.65vh;
+  font-weight: 350;
+}
+
+#platform-to-work p {
+  font-size: 1.25vh;
+  font-weight: 200;
+}
+
+#platform-to-work button {
+  display: inline-block;
+  font-size: 1.5vh;
+  font-weight: 200;
+  background-color: var(--homePage_reddish-color);
+  color: white;
+  border-radius: 5px;
+  padding: 20px 40px;
+}
+
+#platform-to-work-buyers {
+  margin-left: 3vw;
+}
+
+.platform-to-work {
+  margin-left: 0vw;
 }

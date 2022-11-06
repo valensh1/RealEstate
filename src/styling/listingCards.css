@@ -1,0 +1,19 @@
+.listing-card-banners-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 45%;
+  width: 6vw;
+}
+
+.listing-card-banner {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  height: 1.5vh;
+  padding-top: 0.75vh;
+}
+
+.listing-card-banner:not(:first-child) {
+  margin-top: 0.5vh;
+}

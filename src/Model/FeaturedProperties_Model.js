@@ -10,6 +10,7 @@ const featuredProperties = [
     propertyType: 'Industrial',
     saleType: 'Auction',
     auctionDates: 'Oct 31 - Nov 2, 2022',
+    banners: ['Broker Co-Op', 'Financing Available'],
     startingBid: 1800000,
     img: [
       'https://upload.wikimedia.org/wikipedia/commons/0/0b/SoFi_Stadium_2021.jpg',
@@ -27,6 +28,7 @@ const featuredProperties = [
     propertyType: 'Land',
     saleType: 'Auction',
     auctionDates: 'Nov 2 - Nov 4, 2022',
+    banners: ['Broker Co-Op', 'Financing Available'],
     startingBid: 7800000,
     img: [
       'https://upload.wikimedia.org/wikipedia/commons/0/0b/SoFi_Stadium_2021.jpg',
@@ -44,6 +46,7 @@ const featuredProperties = [
     propertyType: 'Flex',
     saleType: 'Auction',
     auctionDates: 'Nov 4 - Nov 6, 2022',
+    banners: ['Broker Co-Op', 'Financing Available'],
     startingBid: 1900000,
     img: [
       'https://upload.wikimedia.org/wikipedia/commons/0/0b/SoFi_Stadium_2021.jpg',
@@ -61,6 +64,7 @@ const featuredProperties = [
     propertyType: 'Hotel',
     saleType: 'Auction',
     auctionDates: 'Nov 6 - Nov 8, 2022',
+    banners: ['Broker Co-Op', 'Financing Available'],
     startingBid: 23000000,
     img: [
       'https://upload.wikimedia.org/wikipedia/commons/0/0b/SoFi_Stadium_2021.jpg',
