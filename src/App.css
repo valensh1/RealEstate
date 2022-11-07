@@ -25,3 +25,16 @@ body,
 body {
   font-size: 1.5rem;
 }
+
+.btn {
+  background-color: var(--homePage_reddish-color);
+  color: white;
+  font-size: 1.3vh;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 10px solid var(--homePage_reddish-color);
+  width: fit-content;
+  line-height: 1vh;
+  text-align: center;
+}

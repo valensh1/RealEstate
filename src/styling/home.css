@@ -114,58 +114,81 @@
   margin-left: 3vw;
 }
 
-#power-of-platform-sections-container button {
-  background-color: var(--homePage_reddish-color);
-  color: white;
-  height: 3vh;
-  font-size: 1.3vh;
-  border-radius: 5px;
-  border: 2px solid var(--homePage_reddish-color);
+#power-of-platform-sections-container .btn {
   position: absolute;
   bottom: 11.5vh;
 }
 
 /* Put the Ten-X platform to work for you section */
-#platform-to-work {
+#background {
   background-image: url('https://cre-tenbox.imgix.net/site%2Fstatic%2FTXBrand_Creative_Territories_Deck01.v1.png?auto=format,compress');
   background-repeat: no-repeat;
   background-size: contain;
-  height: 62.5vh;
+  height: 60vh;
   width: 35vw;
-  position: relative;
-  left: -32.5vw;
-  display: flex;
-  flex-direction: column;
+  position: absolute;
+  top: 158.7vh;
+  left: 0;
+  z-index: 1;
 }
 
-#platform-to-work > h1 {
+#platform-to-work-container {
+  background-color: lightgray;
+  width: 100vw;
+  height: 60vh;
+}
+
+#platform-to-work {
   position: relative;
-  top: 6vh;
-  left: 35vw;
-  font-size: 5vh;
-  font-weight: 400;
-  width: 50vw;
-  word-spacing: 0.25vw;
+  left: 0vw;
+  display: flex;
+  flex-direction: column;
 }
 
 #platform-to-work-section {
   display: flex;
   justify-content: space-evenly;
   position: relative;
-  left: 35vw;
-  width: 50vw;
+  left: 32.5vw;
+  width: 52vw;
 }
 
 #platform-to-work-brokers {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 16.67vw;
+  width: 17.33vw;
+}
+
+#platform-to-work-buyers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 17.33vw;
+  margin-left: 3vw;
+}
+
+#platform-to-work-sellers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 17.33vw;
+  margin-left: 3vw;
+}
+
+#platform-to-work > h1 {
+  position: relative;
+  top: 6vh;
+  left: 32.5vw;
+  font-size: 5vh;
+  font-weight: 400;
+  width: 50vw;
+  word-spacing: 0.25vw;
 }
 
 #platform-to-work h3 {
   margin-top: 7vh;
-  font-size: 2.2vh;
+  font-size: 2vh;
   font-weight: 400;
 }
 
@@ -175,24 +198,27 @@
 }
 
 #platform-to-work p {
-  font-size: 1.25vh;
+  font-size: 1.1vh;
   font-weight: 200;
 }
 
-#platform-to-work button {
-  display: inline-block;
-  font-size: 1.5vh;
-  font-weight: 200;
-  background-color: var(--homePage_reddish-color);
-  color: white;
-  border-radius: 5px;
-  padding: 20px 40px;
+#platform-to-work a {
+  margin-top: 1vh;
 }
 
-#platform-to-work-buyers {
-  margin-left: 3vw;
+/* Join the Thousands of Brokers Section */
+#join-thousands-brokers-section {
+  display: flex;
+  height: 50vh;
+  width: 100vw;
 }
 
-.platform-to-work {
-  margin-left: 0vw;
+#icons-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 15vw;
+}
+
+#icons-section img {
+  height: 3vh;
 }
