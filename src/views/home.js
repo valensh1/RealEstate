@@ -29,6 +29,7 @@ function Home() {
       <FeaturedProperties />
 
       <div id="power-of-platform">
+        <div id="power-of-platform-background"></div>
         <h1>The Power of the Platform</h1>
         <div id="power-of-platform-sections-container">
           <div id="buy-and-sell-faster" className="power-of-platform">
@@ -108,7 +109,8 @@ function Home() {
         </div>
       </div>
       <div id="join-thousands-brokers-section">
-        <h1>Join the thousands of brokers selling twice as fast on Ten-X!</h1>
+        <div id="background2"></div>
+        <h1>Join the thousands of brokers selling twice as fast on Ten-X !</h1>
         <div id="icons-section">
           <img
             src="https://cre-tenbox.imgix.net/homepage%2Fbrokers%2Fcushman.v1.png?auto=format"

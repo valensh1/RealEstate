@@ -74,6 +74,16 @@
   position: relative;
 }
 
+#power-of-platform-background {
+  background-image: url('https://cre-tenbox.imgix.net/site%2Fstatic%2Fgradient-XVector-Left.v2.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  width: 50vw;
+  height: 49vh;
+  position: absolute;
+}
+
 #power-of-platform > h1 {
   margin-top: 5.5vh;
   font-size: 5vh;
@@ -208,17 +218,42 @@
 
 /* Join the Thousands of Brokers Section */
 #join-thousands-brokers-section {
+  position: relative;
   display: flex;
   height: 50vh;
   width: 100vw;
 }
 
-#icons-section {
-  display: flex;
-  flex-wrap: wrap;
-  width: 15vw;
+#join-thousands-brokers-section #background2 {
+  background-image: url('https://cre-tenbox.imgix.net/site%2Fstatic%2Fgray-XVector-Left.v2.svg');
+  position: relative;
+  top: -6.5vh;
+  width: 50vw;
+  height: 70vh;
+  background-size: cover;
 }
 
-#icons-section img {
-  height: 3vh;
+#join-thousands-brokers-section h1 {
+  font-size: 5vh;
+  font-weight: 400;
+  width: 30vw;
+  position: absolute;
+  top: 25%;
+  left: 22.5%;
+  background: linear-gradient(90deg, #0054a6 0%, #ce2027 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#icons-section {
+  position: absolute;
+  left: 56vw;
+  top: 15vh;
+  display: grid;
+  grid-template-columns: repeat(2, 15vh);
+  gap: 3vw;
+}
+
+#icons-section img:last-child {
+  height: 6vh;
 }
