@@ -138,6 +138,41 @@ function Home() {
           />
         </div>
       </div>
+      <div id="leading-platform-section">
+        <div id="leading-platform-background"></div>
+        <h1>The leading platform for trading commercial real estate. </h1>
+        <p>
+          The boundless opportunity of the nation’s best CRE assets paired with
+          the simplicity & security of an online transaction.
+        </p>
+        <div id="leading-platform-stats-section">
+          <div id="leading-platform-stats-page-views">
+            <h3>3,500</h3>
+            <p id="unique-page-views-ptag">
+              UNIQUE PAGE VIEWS PER PROPERTY ON AVERAGE
+            </p>
+          </div>
+
+          <div id="leading-platform-stats-unique-active-visitors">
+            <h3>500,000+</h3>
+            <p id="unique-active-investors-ptag">UNIQUE ACTIVE INVESTORS</p>
+          </div>
+
+          <div id="leading-platform-stats-properties-sold-60">
+            <h3>96%</h3>
+            <p id="properties-sold-60-ptag">
+              OF PROPERTIES SOLD IN 60 DAYS OR LESS
+            </p>
+          </div>
+
+          <div id="leading-platform-stats-properties-out-of-state">
+            <h3>52%</h3>
+            <p id="properties-sold-out-of-state-ptag">
+              OF PROPERTIES SOLD TO OUT-OF-STATE BUYERS
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

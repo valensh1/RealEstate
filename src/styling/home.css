@@ -227,16 +227,16 @@
 #join-thousands-brokers-section #background2 {
   background-image: url('https://cre-tenbox.imgix.net/site%2Fstatic%2Fgray-XVector-Left.v2.svg');
   position: relative;
-  top: -6.5vh;
   width: 50vw;
-  height: 70vh;
+  height: 50vh;
   background-size: cover;
+  background-position: left center;
 }
 
 #join-thousands-brokers-section h1 {
   font-size: 5vh;
   font-weight: 400;
-  width: 30vw;
+  width: 29vw;
   position: absolute;
   top: 25%;
   left: 22.5%;
@@ -256,4 +256,89 @@
 
 #icons-section img:last-child {
   height: 6vh;
+}
+
+/* Leading platform for trading commerical real estate section */
+#leading-platform-section {
+  position: relative;
+  height: 60vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  display: flex;
+}
+
+#leading-platform-background {
+  background-image: url('https://cre-tenbox.imgix.net/site%2Fstatic%2Fgradient-XVector-Right.v2.svg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  height: 60vh;
+  width: 50vw;
+  position: absolute;
+  right: 1.5vw;
+}
+
+#leading-platform-section h1 {
+  position: absolute;
+  top: 3vw;
+  left: 20vw;
+  width: 50vw;
+  font-size: 5vh;
+  font-weight: 400;
+  word-spacing: 0.25vw;
+}
+
+#leading-platform-section > p:first-of-type {
+  position: absolute;
+  top: 12.5vw;
+  left: 20vw;
+  width: 50vw;
+  font-size: 1.5vh;
+  font-weight: 200;
+  color: lightgray;
+}
+
+#leading-platform-stats-section {
+  width: 65vw;
+  position: absolute;
+  /* left: -5vw; */
+  top: 35vh;
+  left: 12.5vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#leading-platform-stats-page-views #unique-page-views-ptag {
+  width: 8vw;
+}
+
+#leading-platform-stats-unique-active-visitors #unique-active-investors-ptag {
+  width: 6vw;
+}
+
+#leading-platform-stats-properties-sold-60 #properties-sold-60-ptag {
+  width: 8vw;
+}
+
+#leading-platform-stats-properties-out-of-state
+  #properties-sold-out-of-state-ptag {
+  width: 8vw;
+}
+
+#leading-platform-stats-section h3 {
+  font-size: 4.8vh;
+  font-weight: 200;
+}
+
+#leading-platform-stats-page-views > p {
+  width: 25%;
+}
+
+#leading-platform-stats-section p {
+  font-size: 1.4vh;
+  font-weight: 200;
+  width: 16.25vw;
+  margin-top: -3vh;
+  color: lightgray;
 }
