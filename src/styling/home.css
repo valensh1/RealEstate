@@ -148,6 +148,17 @@
   height: 60vh;
 }
 
+#platform-to-work-container #platform-to-work-background {
+  background-image: url('https://cre-tenbox.imgix.net/site%2Fstatic%2Fwhite-XVector-Right.v2.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+  width: 50vw;
+  height: 60vh;
+  position: absolute;
+  right: 0;
+}
+
 #platform-to-work {
   position: relative;
   left: 0vw;

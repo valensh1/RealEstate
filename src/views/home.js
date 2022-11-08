@@ -66,6 +66,7 @@ function Home() {
       </div>
       <div id="background"></div>
       <div id="platform-to-work-container">
+        <div id="platform-to-work-background"></div>
         <div id="platform-to-work">
           <h1>Put the Ten-X platform to work for you.</h1>
           <div id="platform-to-work-section">
