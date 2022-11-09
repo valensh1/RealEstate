@@ -8,6 +8,7 @@
   background-color: var(--homePage_reddish-color);
   border-radius: 5px;
   cursor: pointer;
+  z-index: 1;
 }
 
 #hamburger-icon #hidden-svg {
