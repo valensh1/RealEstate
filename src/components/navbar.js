@@ -1,4 +1,6 @@
 import React from 'react';
+// import { BiDownArrow } from 'react-icons/bi'; // Other one that Ten-X uses except it's not colored in
+import { TbArrowBigDown } from 'react-icons/tb';
 
 function Navbar() {
   const navbarLinks = ['Properties', 'Brokers', 'Sellers', 'Buyers'];
@@ -30,6 +32,7 @@ function Navbar() {
         })}
         <div className="navbar-dropdown">
           <li>My Profile</li>
+          <TbArrowBigDown />
           <div className="navbar-dropdown-content">
             <div id="navbar-dropdown-selling">
               <p>SELLING</p>

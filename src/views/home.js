@@ -16,6 +16,7 @@ function Home() {
         <Hamburger />
         <HeroSearch />
       </div>
+      <div id="tenx-background-logo"></div>
 
       <div className="main-line-container">
         <h1 className="main-line" id="line1">
