@@ -1,0 +1,82 @@
+#footer-section {
+  height: 45vh;
+  width: 100vw;
+  background-color: black;
+  position: relative;
+}
+
+#footer-logo-trademark .logo img {
+  position: relative;
+  right: 17.5vw;
+}
+
+#footer-logo-trademark {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1vh;
+  position: relative;
+  /* right: 2vw; */
+}
+
+#footer-logo-trademark span:first-of-type {
+  font-size: 1.4vh;
+  position: relative;
+  bottom: 3vh;
+  left: 1vw;
+}
+
+#footer-logo-trademark span:last-of-type {
+  position: relative;
+  right: 2vw;
+}
+
+#footer-content {
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 25vw;
+  top: 5vh;
+}
+
+#footer-content div {
+  display: flex;
+  flex-direction: column;
+  line-height: 2.5vh;
+}
+
+#footer-content a {
+  font-size: 1.25vh;
+  color: white;
+  text-decoration: none;
+}
+
+#list2 {
+  width: 11.5vw;
+}
+
+#list4-contact-info > a {
+  font-size: 1vh;
+  margin-left: 3vw;
+  width: 5.5vw;
+}
+
+#list4-contact-info > a:first-of-type {
+  font-size: 1.25vh;
+}
+
+#bottom-links {
+  position: absolute;
+  left: 35vw;
+  bottom: 3vw;
+  width: 32.5vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+#bottom-links > a {
+  font-size: 1.2vh;
+  font-weight: 100;
+  color: white;
+  text-decoration: none;
+}

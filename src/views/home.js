@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import HeroSearch from '../components/HeroSearch';
 import Hamburger from '../components/Hamburger';
 import FeaturedProperties from '../components/FeaturedProperties';
+import Footer from '../components/Footer';
 import Button from '../components/Button';
 
 function Home() {
@@ -175,6 +176,16 @@ function Home() {
           </div>
         </div>
       </div>
+      <div id="why-sell-when-ten-x-section">
+        <div id="why-sell-when-ten-x-section-background"></div>
+        <div id="why-sell-when-ten-x-section-text">
+          <span>Why just sell it</span>
+          <span>when you can</span>
+          <span id="linear-gradient-text">Ten-X it .</span>
+          <Button buttonText="START BROWSING" buttonLink="" />
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
