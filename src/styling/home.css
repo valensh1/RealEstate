@@ -138,7 +138,7 @@
   margin-left: 3vw;
 }
 
-#power-of-platform-sections-container .btn {
+#power-of-platform-sections-container .btn-border {
   position: absolute;
   bottom: 11.5vh;
 }
@@ -408,8 +408,12 @@
 
 #why-sell-when-ten-x-section .btn {
   background-color: var(--homePage_bluish-color);
-  border: 10px solid var(--homePage_bluish-color);
-  width: 6vw;
-  line-height: 1vh;
   margin-top: 4vh;
+  padding: 0.75vh 0.5vw 0.25vh 0.5vw;
+}
+
+#why-sell-when-ten-x-section .btn:hover {
+  background-color: white;
+  border: 1px solid var(--homePage_bluish-color);
+  color: blue;
 }

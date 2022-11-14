@@ -58,6 +58,7 @@
 li a,
 span {
   font-weight: 200;
+  font-size: 1.3vh;
 }
 
 #hamburger-hidden-container li:hover {

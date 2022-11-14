@@ -27,6 +27,11 @@ body {
   font-size: 1.5rem;
 }
 
+.btn-border {
+  width: fit-content;
+  height: 2vh;
+}
+
 .btn {
   background-color: var(--homePage_reddish-color);
   color: white;
@@ -34,8 +39,17 @@ body {
   font-weight: 300;
   text-decoration: none;
   border-radius: 5px;
-  border: 10px solid var(--homePage_reddish-color);
+  height: 2vh;
   width: fit-content;
-  line-height: 1vh;
   text-align: center;
+  display: inline-block;
+  padding: 0.25vw 0.25vw 0.25vh 0.25vw;
+}
+
+.btn-border .btn:hover {
+  background-color: white;
+  color: red;
+  font-weight: 400;
+  border: 1px solid red;
+  padding: 0.5vh 0.26vw 0.26vh 0.26vw;
 }

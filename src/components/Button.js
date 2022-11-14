@@ -5,9 +5,11 @@ function Button(props) {
   const { buttonText, buttonLink } = props;
 
   return (
-    <a className="btn" href={buttonLink}>
-      {buttonText}
-    </a>
+    <div class="btn-border">
+      <a className="btn" href={buttonLink}>
+        {buttonText}
+      </a>
+    </div>
   );
 }
 
