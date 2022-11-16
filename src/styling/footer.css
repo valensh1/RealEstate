@@ -51,20 +51,6 @@
   text-decoration: none;
 }
 
-#list2 {
-  width: 11.5vw;
-}
-
-#list4-contact-info > a {
-  font-size: 1vh;
-  margin-left: 3vw;
-  width: 5.5vw;
-}
-
-#list4-contact-info > a:first-of-type {
-  font-size: 1.25vh;
-}
-
 #social-media-links {
   width: 100vw;
   display: flex;
@@ -74,7 +60,7 @@
   bottom: 5vw;
 }
 
-#social-media-links #apple-logo {
+#social-media-links > a:first-of-type > img {
   width: 5vw;
 }
 
