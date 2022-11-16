@@ -1,5 +1,5 @@
 #contact-us {
-  background-color: blue;
+  background-color: var(--homePage_bluish-color);
   color: white;
   height: 3.5vh;
   line-height: 3.5vh; /* Must be same height as div to align vertically */
