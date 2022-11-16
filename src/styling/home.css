@@ -4,6 +4,7 @@
 @import './featuredProperties.css';
 @import './listingCards.css';
 @import './footer.css';
+@import './contactUs.css';
 
 .background-photo {
   background-image: linear-gradient(

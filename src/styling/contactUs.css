@@ -1,0 +1,13 @@
+#contact-us {
+  background-color: blue;
+  color: white;
+  height: 3.5vh;
+  line-height: 3.5vh; /* Must be same height as div to align vertically */
+  width: 7vw;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  bottom: 3.6vh;
+  left: 45vw;
+  font-size: 1vh;
+}

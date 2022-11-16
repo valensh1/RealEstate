@@ -5,6 +5,7 @@ import Hamburger from '../components/Hamburger';
 import FeaturedProperties from '../components/FeaturedProperties';
 import Footer from '../components/Footer';
 import Button from '../components/Button';
+import ContactUs from '../components/ContactUs';
 
 function Home() {
   const mainLine1 = 'THE SMARTER, FASTER, BETTER way';
@@ -186,6 +187,7 @@ function Home() {
         </div>
       </div>
       <Footer />
+      <ContactUs />
     </div>
   );
 }
