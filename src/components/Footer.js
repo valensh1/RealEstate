@@ -59,41 +59,61 @@ function Footer() {
         </div>
 
         <div id="list1-property-types">
-          {footerList1.map((listItem) => {
-            return <a href="">{listItem} </a>;
+          {footerList1.map((listItem, index) => {
+            return (
+              <a key={index} href="">
+                {listItem}{' '}
+              </a>
+            );
           })}
         </div>
 
         <div id="list2">
-          {footerList2.map((listItem) => {
-            return <a href="">{listItem} </a>;
+          {footerList2.map((listItem, index) => {
+            return (
+              <a key={index} href="">
+                {listItem}{' '}
+              </a>
+            );
           })}
         </div>
 
         <div id="list3-pages">
-          {footerList3.map((listItem) => {
-            return <a href="">{listItem} </a>;
+          {footerList3.map((listItem, index) => {
+            return (
+              <a key={index} href="">
+                {listItem}{' '}
+              </a>
+            );
           })}
         </div>
 
         <div id="list4-contact-info">
-          {footerList4.map((listItem) => {
-            return <a href="">{listItem} </a>;
+          {footerList4.map((listItem, index) => {
+            return (
+              <a key={index} href="">
+                {listItem}{' '}
+              </a>
+            );
           })}
         </div>
       </div>
       <div id="social-media-links">
         {socialMediaIconLinkAddresses.map((icon, index) => {
           return (
-            <a href={icon} target="blank">
+            <a key={index} href={icon} target="blank">
               <img src={socialMediaImageSrcLinks[index]} alt="" />
             </a>
           );
         })}
       </div>
       <div id="bottom-links">
-        {legalLinks.map((listItem) => {
-          return <a href="">{listItem} </a>;
+        {legalLinks.map((listItem, index) => {
+          return (
+            <a key={index} href="">
+              {listItem}{' '}
+            </a>
+          );
         })}
       </div>
     </div>

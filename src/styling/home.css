@@ -24,6 +24,12 @@
   position: relative;
 }
 
+@media only screen and (min-width: 992px) {
+  .background-photo {
+    height: 50vh;
+  }
+}
+
 #home-container {
   position: relative;
   display: flex;
@@ -155,6 +161,14 @@
   top: 158.7vh;
   left: 0;
   z-index: 1;
+}
+
+@media only screen and (min-width: 992px) {
+  #background {
+    /* height: 68vh; */
+    width: 30vw;
+    top: 168vh;
+  }
 }
 
 #platform-to-work-container {

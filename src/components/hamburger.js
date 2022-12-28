@@ -1,16 +1,40 @@
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
-import { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { UserContext } from '../App';
 
 function Hamburger() {
   const [isHamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
+  const hiddenHamburgerContent = document.getElementById('hamburger-hidden');
+  const hamburgerIcon = document.getElementById('hamburger-svg');
+  const closeIcon = document.getElementById('hidden-svg');
+
+  const hamburgerMenuItems = [
+    'Properties',
+    'Brokers',
+    'Sellers',
+    'Buyers',
+    'Ten-X Dashboard',
+    'Careers',
+    'About Us',
+    'Help Center',
+  ];
+
+  const clicks = useContext(UserContext);
+
+  // if (clicks.bodyClick && isHamburgerMenuOpen) {
+  //   hiddenHamburgerContent.style.display = 'none';
+  //   closeIcon.style.display = 'none';
+  //   hamburgerIcon.style.display = 'block';
+  // } else if (clicks.bodyClick !== isHamburgerMenuOpen) {
+  //   hiddenHamburgerContent.style.display = 'block';
+  //   closeIcon.style.display = 'block';
+  //   hamburgerIcon.style.display = 'none';
+  // }
 
   const hamburgerClick = (event) => {
-    const hiddenHamburgerContent = document.getElementById('hamburger-hidden');
-    const hamburgerIcon = document.getElementById('hamburger-svg');
-    const closeIcon = document.getElementById('hidden-svg');
-
     if (!isHamburgerMenuOpen) {
+      // clicks.setBodyClick(false);
       hiddenHamburgerContent.style.display = 'block';
       closeIcon.style.display = 'block';
       hamburgerIcon.style.display = 'none';
@@ -33,30 +57,14 @@ function Hamburger() {
         </svg>
         <div id="hamburger-hidden-container">
           <ul id="hamburger-hidden">
-            <li>
-              <a href="">Properties</a>
-            </li>
-            <li>
-              <a href="">Brokers</a>
-            </li>
-            <li>
-              <a href="">Sellers</a>
-            </li>
-            <li>
-              <a href="">Buyers</a>
-            </li>
-            <li>
-              <a href="">Ten-X Dashboard</a>
-            </li>
-            <li>
-              <a href="">Careers</a>
-            </li>
-            <li>
-              <a href="">About Us</a>
-            </li>
-            <li>
-              <a href="">Help Center</a>
-            </li>
+            {hamburgerMenuItems.map((item, index) => {
+              return (
+                <li key={index}>
+                  <a href="">{item}</a>
+                </li>
+              );
+            })}
+
             <li>
               <a href="">
                 Contact

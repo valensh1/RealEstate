@@ -11,6 +11,12 @@
   z-index: 1;
 }
 
+@media only screen and (min-width: 992px) {
+  #hamburger-container {
+    top: -3vh;
+  }
+}
+
 #hamburger-icon #hidden-svg {
   position: absolute;
   top: -0.5vh;
@@ -44,6 +50,12 @@
   height: 45vh;
   background-color: black;
   border-radius: 5px;
+}
+
+@media only screen and (min-width: 992px) {
+  #hamburger-hidden {
+    height: 52.5vh;
+  }
 }
 
 #hamburger-hidden-container li a {

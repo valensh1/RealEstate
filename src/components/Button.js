@@ -5,7 +5,7 @@ function Button(props) {
   const { buttonText, buttonLink } = props;
 
   return (
-    <div class="btn-border">
+    <div className="btn-border">
       <a className="btn" href={buttonLink}>
         {buttonText}
       </a>

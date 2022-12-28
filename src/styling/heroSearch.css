@@ -6,7 +6,7 @@
   left: 25%;
   background-color: white;
   border-radius: 5px;
-  z-index: 100;
+  z-index: 1;
   box-shadow: 1px 1px 30px black;
 }
 
@@ -33,6 +33,12 @@ input {
   border: 0;
 }
 
+@media only screen and (min-width: 992px) {
+  input {
+    width: 45%;
+  }
+}
+
 #hero-search-menu-btn {
   position: relative;
   left: 58%;
@@ -50,6 +56,12 @@ select {
   font-size: 1.5rem;
 }
 
+@media only screen and (min-width: 992px) {
+  select {
+    left: -1.5vw;
+  }
+}
+
 #search-button {
   position: absolute;
   height: 60%;
@@ -65,6 +77,12 @@ select {
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
+}
+
+@media only screen and (min-width: 992px) {
+  #search-button {
+    width: 37.5%;
+  }
 }
 
 #right-arrow {
