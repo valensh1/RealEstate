@@ -1,13 +1,10 @@
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
-import React, { useState, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { UserContext } from '../App';
 
 function Hamburger() {
   const [isHamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
-  const hiddenHamburgerContent = document.getElementById('hamburger-hidden');
-  const hamburgerIcon = document.getElementById('hamburger-svg');
-  const closeIcon = document.getElementById('hidden-svg');
 
   const hamburgerMenuItems = [
     'Properties',
@@ -20,28 +17,17 @@ function Hamburger() {
     'Help Center',
   ];
 
-  const clicks = useContext(UserContext);
+  const clicksOutsideHamburger = React.useContext(UserContext);
+  console.log(clicksOutsideHamburger);
 
-  // if (clicks.bodyClick && isHamburgerMenuOpen) {
-  //   hiddenHamburgerContent.style.display = 'none';
-  //   closeIcon.style.display = 'none';
-  //   hamburgerIcon.style.display = 'block';
-  // } else if (clicks.bodyClick !== isHamburgerMenuOpen) {
-  //   hiddenHamburgerContent.style.display = 'block';
-  //   closeIcon.style.display = 'block';
-  //   hamburgerIcon.style.display = 'none';
-  // }
-
+  // Sets the opening and closing of the hamburger menu
   const hamburgerClick = (event) => {
     if (!isHamburgerMenuOpen) {
-      // clicks.setBodyClick(false);
-      hiddenHamburgerContent.style.display = 'block';
-      closeIcon.style.display = 'block';
-      hamburgerIcon.style.display = 'none';
+      console.log('This is the if block');
+      clicksOutsideHamburger.checkHamburgerOpen(true);
     } else {
-      hiddenHamburgerContent.style.display = 'none';
-      closeIcon.style.display = 'none';
-      hamburgerIcon.style.display = 'block';
+      console.log('This is the else block');
+      clicksOutsideHamburger.checkHamburgerOpen(false);
     }
     setHamburgerMenuOpen(!isHamburgerMenuOpen);
   };
@@ -56,7 +42,10 @@ function Hamburger() {
           <GiHamburgerMenu name="hamburger-icon" />
         </svg>
         <div id="hamburger-hidden-container">
-          <ul id="hamburger-hidden">
+          <ul
+            id="hamburger-hidden"
+            style={{ display: isHamburgerMenuOpen ? 'block' : 'none' }}
+          >
             {hamburgerMenuItems.map((item, index) => {
               return (
                 <li key={index}>
