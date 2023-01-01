@@ -17,7 +17,7 @@ function Hamburger() {
     'Help Center',
   ];
 
-  const hamburger = React.useContext(UserContext);
+  const hamburger = React.useContext(UserContext).hamburgerMenu;
   console.log(hamburger);
 
   // Sets the opening and closing of the hamburger menu

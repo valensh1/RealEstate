@@ -6,7 +6,7 @@ export const UserContext = React.createContext();
 
 function App() {
   const [hamburgerMenu, setHamburgerMenu] = useState('');
-  // const [hamburgerStatus, setHamburgerStatus] = useState(false);
+  const [bodyClick, setBodyClick] = useState('');
 
   const bodyClickEvent = (event) => {
     if (event.target.id === 'hamburger-hidden-container' && !hamburgerMenu) {
@@ -20,12 +20,13 @@ function App() {
     } else {
       console.log(event.target.id);
       setHamburgerMenu(false);
+      setBodyClick(false);
     }
   };
 
   return (
     <div className="App" onClick={bodyClickEvent}>
-      <UserContext.Provider value={hamburgerMenu}>
+      <UserContext.Provider value={{ hamburgerMenu }}>
         <Home />
       </UserContext.Provider>
     </div>
