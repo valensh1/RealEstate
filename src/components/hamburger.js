@@ -4,8 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { UserContext } from '../App';
 
 function Hamburger() {
-  const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState('');
-
   const hamburgerMenuItems = [
     'Properties',
     'Brokers',
@@ -17,21 +15,13 @@ function Hamburger() {
     'Help Center',
   ];
 
-  const hamburger = React.useContext(UserContext).hamburgerMenu;
+  const hamburger = React.useContext(UserContext);
   console.log(hamburger);
-
-  // Sets the opening and closing of the hamburger menu
-  const hamburgerClick = (event) => {
-    if (!hamburger) {
-      setHamburgerMenuOpen(true);
-    } else {
-      setHamburgerMenuOpen(false);
-    }
-  };
 
   return (
     <div id="hamburger-container">
-      <div id="hamburger-icon" onClick={hamburgerClick}>
+      {/* <div id="hamburger-icon" onClick={hamburgerClick}> */}
+      <div id="hamburger-icon">
         <svg className="svg-icons" id="hidden-svg">
           <AiOutlineClose name="close-icon" />
         </svg>
@@ -41,7 +31,9 @@ function Hamburger() {
         <div id="hamburger-hidden-container">
           <ul
             id="hamburger-hidden"
-            style={{ display: hamburgerMenuOpen ? 'block' : 'none' }}
+            style={{
+              display: hamburger?.hamburgerMenu?.hamburger ? 'block' : 'none',
+            }}
           >
             {hamburgerMenuItems.map((item, index) => {
               return (
