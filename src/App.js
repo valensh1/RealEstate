@@ -5,36 +5,27 @@ import Home from './views/home';
 export const UserContext = React.createContext();
 
 function App() {
-  const [bodyClick, setBodyClick] = useState(false);
-  const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
-
-  // const bodyClickEvent = (event) => {
-  //   console.log('You clicked on the body');
-  //   if (event.target.id !== 'hamburger-hidden-container') {
-  //     setBodyClick(!bodyClick);
-  //   }
-  //   console.log(event.target.id);
-  //   console.log(bodyClick);
-  // };
-
-  const checkHamburgerOpen = (status) => {
-    console.log(status);
-    setHamburgerMenuOpen(!hamburgerMenuOpen);
-  };
+  const [hamburgerMenu, setHamburgerMenu] = useState('');
+  // const [hamburgerStatus, setHamburgerStatus] = useState(false);
 
   const bodyClickEvent = (event) => {
-    if (event.target.id !== 'hamburger-hidden-container' && hamburgerMenuOpen) {
-      setBodyClick(true);
+    if (event.target.id === 'hamburger-hidden-container' && !hamburgerMenu) {
+      console.log(event.target.id);
+      setHamburgerMenu(true);
+    } else if (
+      event.target.id === 'hamburger-hidden-container' &&
+      hamburgerMenu
+    ) {
+      setHamburgerMenu(false);
+    } else {
+      console.log(event.target.id);
+      setHamburgerMenu(false);
     }
-    console.log(event.target.id);
-    console.log(bodyClick);
   };
 
   return (
     <div className="App" onClick={bodyClickEvent}>
-      <UserContext.Provider
-        value={{ bodyClick, setHamburgerMenuOpen, checkHamburgerOpen }}
-      >
+      <UserContext.Provider value={hamburgerMenu}>
         <Home />
       </UserContext.Provider>
     </div>

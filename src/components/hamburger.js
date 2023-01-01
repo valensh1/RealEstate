@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { UserContext } from '../App';
 
 function Hamburger() {
-  const [isHamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
+  const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState('');
 
   const hamburgerMenuItems = [
     'Properties',
@@ -17,19 +17,16 @@ function Hamburger() {
     'Help Center',
   ];
 
-  const clicksOutsideHamburger = React.useContext(UserContext);
-  console.log(clicksOutsideHamburger);
+  const hamburger = React.useContext(UserContext);
+  console.log(hamburger);
 
   // Sets the opening and closing of the hamburger menu
   const hamburgerClick = (event) => {
-    if (!isHamburgerMenuOpen) {
-      console.log('This is the if block');
-      clicksOutsideHamburger.checkHamburgerOpen(true);
+    if (!hamburger) {
+      setHamburgerMenuOpen(true);
     } else {
-      console.log('This is the else block');
-      clicksOutsideHamburger.checkHamburgerOpen(false);
+      setHamburgerMenuOpen(false);
     }
-    setHamburgerMenuOpen(!isHamburgerMenuOpen);
   };
 
   return (
@@ -44,7 +41,7 @@ function Hamburger() {
         <div id="hamburger-hidden-container">
           <ul
             id="hamburger-hidden"
-            style={{ display: isHamburgerMenuOpen ? 'block' : 'none' }}
+            style={{ display: hamburgerMenuOpen ? 'block' : 'none' }}
           >
             {hamburgerMenuItems.map((item, index) => {
               return (
