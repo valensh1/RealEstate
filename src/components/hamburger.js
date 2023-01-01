@@ -1,6 +1,6 @@
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { UserContext } from '../App';
 
 function Hamburger() {
@@ -15,12 +15,12 @@ function Hamburger() {
     'Help Center',
   ];
 
-  const hamburger = React.useContext(UserContext);
+  // Passing of Context from Parent Component (e.g. App.js) to be used by Child Component (e.g. Hamburger.js); Each time context is passed it forces re-render for Child Component
+  const hamburger = React.useContext(UserContext).hamburgerMenu;
   console.log(hamburger);
 
   return (
     <div id="hamburger-container">
-      {/* <div id="hamburger-icon" onClick={hamburgerClick}> */}
       <div id="hamburger-icon">
         <svg className="svg-icons" id="hidden-svg">
           <AiOutlineClose name="close-icon" />
@@ -32,7 +32,7 @@ function Hamburger() {
           <ul
             id="hamburger-hidden"
             style={{
-              display: hamburger?.hamburgerMenu?.hamburger ? 'block' : 'none',
+              display: hamburger ? 'block' : 'none',
             }}
           >
             {hamburgerMenuItems.map((item, index) => {

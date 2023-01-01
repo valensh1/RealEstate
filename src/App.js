@@ -1,50 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Home from './views/home';
 
+// Creation of React Context to be exported to Child Components
 export const UserContext = React.createContext();
 
 function App() {
-  const [hamburgerMenu, setHamburgerMenu] = useState({
-    hamburger: false,
-    bodyWasClicked: false,
-  });
+  const [hamburgerMenu, setHamburgerMenu] = useState(false);
 
   const bodyClickEvent = (event) => {
-    if (
-      event.target.id === 'hamburger-hidden-container' &&
-      !hamburgerMenu.hamburger
-    ) {
-      console.log(event.target.id);
+    if (event.target.id === 'hamburger-hidden-container' && !hamburgerMenu) {
       console.log(`Hamburger menu was clicked; Open hamburger menu`);
-      setHamburgerMenu({
-        hamburger: true,
-        bodyWasClicked: false,
-      });
-    } else if (
-      event.target.id === 'hamburger-hidden-container' &&
-      hamburgerMenu.hamburger
-    ) {
-      console.log(event.target.id);
-      console.log(
-        `Hamburger menu was clicked when hamburger open; Close hamburger menu`
-      );
-      setHamburgerMenu({
-        hamburger: false,
-        bodyWasClicked: false,
-      });
+      setHamburgerMenu(true);
     } else {
-      console.log(event.target.id);
-      console.log(`Body was clicked; Hamburger menu should be CLOSED!!!`);
-      setHamburgerMenu({
-        hamburger: false,
-        bodyWasClicked: false,
-      });
+      console.log(
+        `Either body was clicked or hamburger menu was clicked while its open; Hamburger menu should be CLOSED!!!`
+      );
+      setHamburgerMenu(false);
     }
   };
 
   return (
     <div className="App" onClick={bodyClickEvent}>
+      {/* Wrap UserContext.Provider Component around whichever Child Components context will be passed down to. MUST BE VALUE VARIABLE NAME USED OTHERWISE IT WON'T WORK!!!! */}
       <UserContext.Provider value={{ hamburgerMenu }}>
         <Home />
       </UserContext.Provider>
