@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useState } from 'react';
 import { AiOutlineArrowRight } from 'react-icons/ai'; // importing svg's to use from react-icons dependency
 import {
@@ -9,6 +10,14 @@ import ListingCards from './ListingCards';
 
 function FeaturedProperties() {
   const [favorites, setFavorites] = useState(featuredPropertiesModel);
+  const [featuredPropertiesToDisplay, setFeaturedPropertiesToDisplay] =
+    useState(featuredPropertiesModel.slice(0, 4));
+  const [
+    indexOfFeaturedPropertiesDisplayed,
+    setIndexOfFeaturedPropertiesDisplayed,
+  ] = useState({ minimum: 0, maximum: 3 });
+
+  const totalFeaturedPropertiesDisplayed = 4;
 
   // Click event which finds the property that was clicked and changes the favorite key/value pair from the featuredProperties object to the opposite
   const starClick = (event) => {
@@ -22,6 +31,31 @@ function FeaturedProperties() {
       }
     }
     setFavorites([...favorites]);
+  };
+
+  const featuredPropertiesRightArrowClick = () => {
+    let maxIndexNumber = featuredPropertiesModel.length - 1;
+    let minimumIncrementer = ++indexOfFeaturedPropertiesDisplayed.minimum;
+    let maximumIncrementer = ++indexOfFeaturedPropertiesDisplayed.maximum;
+    setIndexOfFeaturedPropertiesDisplayed({
+      minimum: minimumIncrementer,
+      maximum: maximumIncrementer,
+    });
+    // setFeaturedPropertiesToDisplay(
+    //   featuredPropertiesModel.slice(minimumIncrementer, maximumIncrementer)
+    // );
+    const images = document.querySelectorAll('.show');
+    images[0].style.transition = '.75s';
+    images[0].style.transform = 'translateX(-125px)';
+    // images[0].style.width = '0px';
+    // images[0].style.height = '0px';
+    images[0].style.opacity = '0';
+    images[1].style.transition = '.75s';
+    images[1].style.transform = 'translateX(-125px)';
+    images[2].style.transition = '.75s';
+    images[2].style.transform = 'translateX(-125px)';
+    images[3].style.transition = '.75s';
+    images[3].style.transform = 'translateX(-125px)';
   };
 
   return (
@@ -43,7 +77,7 @@ function FeaturedProperties() {
         className="featured-properties-listing-cards-container"
         onClick={starClick}
       >
-        <ListingCards listings={favorites} />
+        <ListingCards listings={featuredPropertiesToDisplay} />
         <BsFillArrowLeftCircleFill
           id="left-carousel-arrow"
           className="carousel-arrows"
@@ -51,6 +85,7 @@ function FeaturedProperties() {
         <BsFillArrowRightCircleFill
           id="right-carousel-arrow"
           className="carousel-arrows"
+          onClick={featuredPropertiesRightArrowClick}
         />
       </div>
     </div>

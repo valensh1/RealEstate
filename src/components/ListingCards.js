@@ -24,8 +24,9 @@ function ListingCards(props) {
       {listings.map((card) => {
         return (
           <div
-            className="featured-properties-single-listing-card listing-cards"
+            className="featured-properties-single-listing-card listing-cards show"
             key={card?.id}
+            name={card?.id}
           >
             <div className="featured-properties-listing-card-headings">
               <h5>{`Online ${card?.saleType}`}</h5>
