@@ -16,7 +16,7 @@ function FeaturedProperties() {
     indexOfFeaturedPropertiesDisplayed,
     setIndexOfFeaturedPropertiesDisplayed,
   ] = useState({ minimum: 0, maximum: 3 });
-
+  let [translateIncrementer, setTranslateIncrementer] = useState(0);
   const totalFeaturedPropertiesDisplayed = 4;
 
   // Click event which finds the property that was clicked and changes the favorite key/value pair from the featuredProperties object to the opposite
@@ -34,6 +34,8 @@ function FeaturedProperties() {
   };
 
   const featuredPropertiesRightArrowClick = () => {
+    setTranslateIncrementer((translateIncrementer -= 125));
+    console.log(translateIncrementer);
     let maxIndexNumber = featuredPropertiesModel.length - 1;
     let minimumIncrementer = ++indexOfFeaturedPropertiesDisplayed.minimum;
     let maximumIncrementer = ++indexOfFeaturedPropertiesDisplayed.maximum;
@@ -45,17 +47,24 @@ function FeaturedProperties() {
     //   featuredPropertiesModel.slice(minimumIncrementer, maximumIncrementer)
     // );
     const images = document.querySelectorAll('.show');
-    images[0].style.transition = '.75s';
-    images[0].style.transform = 'translateX(-125px)';
-    // images[0].style.width = '0px';
-    // images[0].style.height = '0px';
-    images[0].style.opacity = '0';
-    images[1].style.transition = '.75s';
-    images[1].style.transform = 'translateX(-125px)';
-    images[2].style.transition = '.75s';
-    images[2].style.transform = 'translateX(-125px)';
-    images[3].style.transition = '.75s';
-    images[3].style.transform = 'translateX(-125px)';
+    images.forEach((card, index) => {
+      if (index === 0) {
+        card.style.transition = '.75s';
+        card.style.transform = `translateX(${translateIncrementer}px)`;
+        card.style.opacity = '0';
+
+        //! NEED TO LOOK INTO THIS CODE RIGHT HERE!!!!
+        setFeaturedPropertiesToDisplay(
+          featuredPropertiesModel.slice(
+            indexOfFeaturedPropertiesDisplayed.minimum,
+            indexOfFeaturedPropertiesDisplayed.maximum
+          )
+        );
+      } else {
+        card.style.transition = '.75s';
+        card.style.transform = `translateX(${translateIncrementer}px)`;
+      }
+    });
   };
 
   return (
